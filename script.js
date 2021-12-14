@@ -25,9 +25,11 @@ class Ball {
     hitWall() {
         if (this.x > 480 || this.x < 20) {
             this.dx = -this.dx;
+            sound.play();
         }
         if (this.y > 480 || this.y < 20) {
             this.dy = -this.dy;
+            sound.play();
         }
     }
 }
