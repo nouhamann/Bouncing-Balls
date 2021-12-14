@@ -7,15 +7,14 @@ let sound = new Audio('KY3RAVB-game-ball-bounce.mp3')
 
 class Ball {
     color:string = "black"
-    x:number = Math.floor(Math.random()*460)+1
-    radius:number = 20
-    y:number=Math.floor(Math.random()*460)+1
-    dy:number = Math.floor(Math.random()*7)+1
-    dx:number = Math.floor(Math.random()*5)+1
+    x:number = Math.floor(Math.random()*400)+1
+    radius:number = Math.floor(Math.random()*400)+1
+    y:number=50
+    dy:number = Math.floor(Math.random()*17)+1
+    dx:number = Math.floor(Math.random()*14)+1
 
     
     draw(){
-        ctx.clearRect(0,0,500,500)  //Clears the canvas
         ctx.beginPath();
         ctx.arc(this.x, this.y, 20, 0, 2 * Math.PI);
         ctx.fillStyle= "black";
@@ -38,11 +37,13 @@ class Ball {
 }
 
 const balls:Ball[]=[]
-const numBalls=20
+const numBalls=25
 for(let i= 0; i<numBalls; i++){
     balls.push(new Ball())
 
 }
+
+
 requestAnimationFrame(cycle)
 
 function cycle(){
