@@ -39,7 +39,7 @@ class Ball {
 }
 
 const balls:Ball[]=[]
-const numBalls=25
+const numBalls=15
 for(let i= 0; i<numBalls; i++){
     balls.push(new Ball())
 
